@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Bookshleves Allocation</title>
+        <link rel="stylesheet" href="style_Group3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">  
+    </head>
+    <body>
+        <section>
+            <!-- top bar -->
+            <div class="w3-top">
+                <div class="w3-row w3-padding w3-black">
+                <div class="w3-col s3">
+                    <a href="#welcome" class="w3-button w3-block w3-black">WELCOME</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="#try" class="w3-button w3-block w3-black">TRY IT</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="results_Group3.html" class="w3-button w3-block w3-black">RESULT</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+                </div>
+                </div>
+            </div>
+
+             <!-- Add a background color and large text to the whole page -->
+            <div class="w3-sand w3-grayscale w3-large">
+
+            <!-- welcome page with image -->
+            <header class="bgimg w3-display-container w3-grayscale-min" id="welcome">
+                <div class="w3-display-middle w3-center">
+                <span class="w3-text-white" style="font-size:90px">Bookshelves<br>Allocation</span>
+                </div>
+                <div class="w3-display-bottomright w3-center w3-padding-large">
+                <span class="w3-tag">CSE Project</span>
+                </div>
+            </header>
+            <div class="container" id="try">
+                <div class="display">
+                    
+                    <h1><span class="w3-tag w3-wide">Bookshelves Allocation Using Hamilton's Method</span></h1>
+                    
+                    <fieldset>
+                        <div class="inputs">
+                            <label for="totalBooks">Total no. of books:</label>
+                            <input type="text" id="totalBooks" name="totalBooks" placeholder="Books in storage"><br><br>
+
+                            <label for="availShelves">No. of shelves available:</label>
+                            <input type="text" id="availShelves" name="availShelves" placeholder="Available Shelves"><br><br>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+
+                        <h4>Input Booktypes and stock value in storage here:</h6>
+
+                        <div class="bookType">
+                            <div id="read" style="display: block;">
+                                <label for="books">Book type:</label>
+                                <input type="text" id="bookName" name="books" placeholder="Ex. Math">
+                                <br>
+                                <label for="stock">Book Stock:</label>
+                                <input class="w3-padding-20" type="text" id="bookValue" name="books" placeholder="Available Books">
+                            </div>
+                            <form method="post" action="field.html">
+                                <span id="write"></span>
+                                <input type="button" id="submit" value="Submit">
+                            </form>
+                        </div>
+                        <div><span id="output"></span></div>
+
+                        <div class="buttons">
+                            <input type="button" id="calculate" value="Calculate">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="Answer">
+                    <div id="answerDisplay"></div>
+                    <input type="button" id="answerButton" style="display: none;" value="Show Answers">
+                </div>
+            </div>
+            <!-- Add a background color and large text to the whole page -->
+            <div class="w3-black w3-large">
+
+            <div class="container" id="about">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ABOUT</span></h5>
+                <h5 class="w3-center w3-padding-30">FINAL Project in CSE</h5>
+                <p> Bookshelves allocation is made to blavh 
+                    This is in partial fulfillment of the requirements for CS Professional Elective 2. </p>
+                <br>
+                <br>
+
+            </div>
+        </section>
+        <script src="function_Group3.js"></script>
+    </body>
+</html>

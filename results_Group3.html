@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Bookshleves Allocation</title>
+        <link rel="stylesheet" href="style_Group3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    </head>
+    <body>
+        <section>
+            
+            <div class="w3-top">
+                <div class="w3-row w3-padding w3-black">
+                <div class="w3-col s3">
+                    <a href="BookshelvesAllocation_Group3.html #welcome" class="w3-button w3-block w3-black">WELCOME</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="BookshelvesAllocation_Group3.html #try" class="w3-button w3-block w3-black">TRY IT</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="results_Group3.html" class="w3-button w3-block w3-black">RESULT</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="BookshelvesAllocation_Group3.html #about" class="w3-button w3-block w3-black">ABOUT</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="w3-sand w3-grayscale w3-large">
+            <header class="bgimg w3-display-container w3-grayscale-min" id="welcome">
+                <div class="w3-display-middle w3-center">
+                    <span class="w3-text-white" style="font-size:90px">Bookshelves<br>Allocation</span>
+                </div>
+                <div class="w3-display-bottomright w3-center w3-padding-large">
+                    <span class="w3-tag">CSE Project</span>
+                </div>
+            </header>
+            
+            <div class="container">
+                <div class="display">
+                    <h1><span class="w3-tag w3-wide">Bookshelves Allocation Using Hamilton's Method</span></h1>
+                    <div><p>Total Number of Books: <span id="total_books"></span></p></div>
+                    <div><p>Number of shelves to be allocated: <span id="shelves_num"></span></p></div>
+                    <div><p>Surplus: <span id="surp"></span></p></div>
+                    <div><p>Results:</p><span id="final_books"></span></div>
+
+
+                </div>
+            </div>
+
+            <div class="w3-black w3-large">
+            <div class="container" id="about">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ABOUT</span></h5>
+                <h5 class="w3-center w3-padding-30">FINAL Project in CSE</h5>
+                <p> Bookshelves allocation is made to blavh 
+                    This is in partial fulfillment of the requirements for CS Professional Elective 2. </p>
+                <br>
+                <br>
+
+            </div>
+            
+            <script>
+                
+                const tbooks = localStorage.getItem('total_books');
+                const shelves = localStorage.getItem('shelves_num');
+                const surpus = localStorage.getItem('surp');
+                const bookcount = JSON.parse(localStorage.getItem('book_count'));
+                const bookName = JSON.parse(localStorage.getItem('book_name'));
+                const bookstock = JSON.parse(localStorage.getItem('final_alloc'));
+                var final;
+                var tempb;
+                var temps;
+
+                document.getElementById('total_books').textContent = tbooks;
+                document.getElementById('shelves_num').textContent = shelves;
+                document.getElementById('surp').textContent = surpus;
+
+                for(let i=0; i<bookcount; i++){
+                    tempb = bookName[i];
+                    temps = bookstock[i];
+                    final = tempb.concat(": ", temps);
+                    last = final + "<br>";
+                    document.getElementById('final_books').insertAdjacentHTML("beforeend", last);
+                }
+                console.log(typeof(bookcount));
+
+            </script>
+        </section>
+    </body>
+</html>
